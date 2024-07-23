@@ -1,9 +1,12 @@
-import { SignIn} from '@clerk/nextjs';
+import Centered from '@/components/layouts/centered';
+import { SignIn } from '@clerk/nextjs';
 import React from 'react';
 
 const Page = () => {
     return (
-        <SignIn />
+        <Centered>
+            <SignIn />
+        </Centered>
     );
 };
 

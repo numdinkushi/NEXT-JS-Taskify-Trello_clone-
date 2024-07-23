@@ -3,6 +3,7 @@ import { Medal } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { headingFont, textFont } from "@/constants/fonts";
+// import { UserButton } from "@clerk/nextjs";
 
 
 export default function MarketingPage() {
