@@ -37,7 +37,6 @@ interface NavItemProps {
 }
 
 const NavItem = ({ isActive, isExpanded, organization, onExpand }: NavItemProps) => {
-  console.log(123123, organization.id);
 
   const routes = [
     {
