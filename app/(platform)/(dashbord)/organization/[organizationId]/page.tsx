@@ -1,33 +1,17 @@
-import { Button } from '@/components/ui/button';
-import { db } from '@/lib/db';
-import Form from './form';
+import { Separator } from "@/components/ui/separator";
+import { useOrganization } from "@clerk/nextjs";
+import Info from "./_components/info";
+import BoardList from "./_components/board-list";
 
 const OrganizationIdPage = async () => {
 
-  const boards = await db.board.findMany();
+
   return (
-    <div className="flex flex-col space-y">
-      <Form />
-      {/* <form action={create}>
-        <input
-          id='title'
-          name='title'
-          required
-          placeholder='Enter a board title'
-          className='border-black border p-1'
-        />
-        <Button type='submit'>
-          Submit
-        </Button>
-      </form> */}
-      <div className="space-y-2">
-        {
-          boards.map((board) => (
-            <div key={board.id}>
-              <h3>{board.title}</h3>
-            </div>
-          ))
-        }
+    <div className="w-full mb-20">
+      <Info />
+      <Separator className="my-4 w-[800px]" />
+      <div className="px-2 md:px-4">
+        <BoardList />
       </div>
     </div>
   );
